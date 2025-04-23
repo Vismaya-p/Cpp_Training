@@ -1,0 +1,12 @@
+#pragma once
+int sumOfDigit();
+int salary();
+int price();
+int area();
+int swap();
+int marks();
+int alphapyramid();
+int reverse();
+int star();
+int rightTriangle();
+int invertedRightTri();
