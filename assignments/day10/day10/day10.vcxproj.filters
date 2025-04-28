@@ -27,5 +27,11 @@
     <ClCompile Include="prg4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mid_value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sum_of_angles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
