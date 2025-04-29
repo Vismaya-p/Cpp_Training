@@ -15,25 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prg1.cpp">
+    <ClCompile Include="prg01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prg2.cpp">
+    <ClCompile Include="prg02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prg3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="prg4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mid_value.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sum_of_angles.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="function_puzzle.cpp">
+    <ClCompile Include="prg03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
