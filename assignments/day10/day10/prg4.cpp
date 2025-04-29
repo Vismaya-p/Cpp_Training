@@ -2,13 +2,12 @@
 using namespace std;
 int noOfZero(int n)
 {
-	int digit = n % 10;
-	if (digit==0)
+	if (n==0)
 		return 1;
 	if (n % 10 == 0)
-		//return 1 + noOfZero(n/10);
+		return 1 + noOfZero(n/10);
 	else
-		//return noOfZero(n/10);
+		return noOfZero(n/10);
 	
 }
 int main()

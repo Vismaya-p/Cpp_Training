@@ -27,13 +27,37 @@
     <ClCompile Include="prg4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mid_value.cpp">
+    <ClCompile Include="q1_mid_value.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sum_of_angles.cpp">
+    <ClCompile Include="q10_sum_of_angles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="function_puzzle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q2_sumOfDigit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q3_leap_year.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q4_secondLast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q5_hourToSeconds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q6_sum_even.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q7_new_num.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q8_swap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q9_pow_using_mul.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
