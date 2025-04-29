@@ -4,16 +4,7 @@ using namespace std;
 int main()
 {
 	int n;
-	int num0 = 0;
-	int num1 = 0;
-	int num2 = 0;
-	int num3 = 0;
-	int num4 = 0;
-	int num5 = 0;
-	int num6 = 0;
-	int num7 = 0;
-	int num8 = 0;
-	int num9 = 0;
+	int num0 = 0,num1 = 0,num2 = 0,num3 = 0,num4 = 0, num5 = 0, num6 = 0,num7 =0,num8 = 0, num9 = 0;
 	cout << "enter a num: ";
 	cin >> n;
 	while (n != 0)
