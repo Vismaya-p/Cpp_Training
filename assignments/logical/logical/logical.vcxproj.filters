@@ -39,5 +39,11 @@
     <ClCompile Include="q8_energy crystals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="q9_magicPuzzle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q10_double.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
