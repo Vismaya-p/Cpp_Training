@@ -21,5 +21,14 @@
     <ClCompile Include="q2_oddFloors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="q3_no_mirror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q4_dragon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q5_stairOfSquares.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
