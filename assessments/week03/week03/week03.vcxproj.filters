@@ -15,28 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prg1_2D_array.cpp">
+    <ClCompile Include="problem2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prg2_matrix_mul.cpp">
+    <ClCompile Include="problem1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="string.cpp">
+    <ClCompile Include="problem3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prg02_str.cpp">
+    <ClCompile Include="problem5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prg03_str.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="prg04_strcmp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="prg06.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="largest_element_array.cpp">
+    <ClCompile Include="program6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
