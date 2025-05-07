@@ -1,0 +1,24 @@
+#include<iostream>
+//remove the vowels
+#include<cstring>
+#define MAX 50
+using namespace std;
+int main()
+{
+	char ch[MAX]; //input array
+	cin.getline(ch,MAX-1);
+	char str[MAX]; //output array
+	memset(str, '\0', MAX-1);
+	int j = 0;
+	for (int i = 0;i < strlen(ch);i++)
+	{
+		if (!(ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u' || ch[i] == 'A' || ch[i] == 'E' || ch[i] == 'I' || ch[i] == 'O' || ch[i] == 'U'))
+		{
+			str[j] = ch[i];
+			j++;
+		}
+	}
+	str[j] = '\0';
+	cout << "string is:" << str;
+}
+
