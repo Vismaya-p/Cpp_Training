@@ -23,25 +23,27 @@ int main()
 }
 */
 {
-	int a[] = {10,20,30,10,30,4};
+	int a[] = {10,10,10,10,10,10};
 	int n = sizeof(a) / sizeof(a[0]);
 	for (int i = 0;i < n;i++)
 	{
-		for (int j = i+1;j < n;j++)
+		for (int j = i+1;j < n;)
 		{
 			if (a[i] == a[j])
 			{
-				for (int k = j;k < n - 1;k++)
+				for (int k = j;k < n - 1;k++)//shifting of elements to the left
 				{
 					a[k] = a[k + 1];//shifting j position to k
 				}
-				n--;
+				n--;//reduce the size 
 			}
+			else
+				j++;//no duplicate item found in next element
 		}
 	}
 	cout << "resultant array: ";
 	for (int i = 0;i < n;i++)
 	{
-		cout <<a[i];
+		cout <<a[i]<<" ";
 	}
 }

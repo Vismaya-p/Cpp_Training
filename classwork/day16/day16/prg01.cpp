@@ -1,3 +1,4 @@
+//minimum and maximum element in an array
 #include<iostream>
 #define MAX 30
 using namespace std;
