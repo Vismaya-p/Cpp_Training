@@ -3,17 +3,17 @@
 #include <limits>
 using namespace std;
 int main() {
-	cout << "Size of int: " << sizeof(int) << " bytes" << endl;
-	cout << "Min int: " << numeric_limits<int>::min() << endl;
-	cout << "Max int: " << numeric_limits<int>::max() << endl;
-
-	cout << "Size of float: " << sizeof(float) << " bytes" << endl;
-	cout << "Min float: " << numeric_limits<float>::min() << endl;
-	cout << "Max float: " << numeric_limits<float>::max() << endl;
-
-	cout << "Size of double: " << sizeof(double) << " bytes" << endl;
-	cout << "Min double: " << numeric_limits<double>::min() << endl;
-	cout << "Max double: " << numeric_limits<double>::max() << endl;
+	int num;
+	cout << "enter a number: ";
+	cin >> num;
+	if (num<INT_MIN || num>INT_MAX)
+	{
+		cout << "The number is out of integer limits" << endl;
+	}
+	else
+	{
+		cout << "The number is within integer limit" << endl;
+	}
 
 	return 0;
 }
