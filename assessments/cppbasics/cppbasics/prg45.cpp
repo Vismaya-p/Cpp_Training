@@ -5,8 +5,8 @@ int main()
 {
 	int a, b;
 	cin >> a >> b;
-	int max = (a + b + abs(a - b)) / 2;
-	int min = (a + b - abs(a - b)) / 2;
+	int max = (a < b) ? a : b;
+	int min = (a > b) ? a : b;
 	cout << "max = " << max << endl;
 	cout << "min = " << min << endl;
 	return 0;
