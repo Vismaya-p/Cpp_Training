@@ -8,7 +8,7 @@ int main()
 	int j = 0;
 	for (int i = 0;str1[i] != 0;i++)
 	{
-		if ((str1[i] >= 'A' && str1[i] >= 'Z') || (str1[i] >= 'a' && str1[i] >= 'z'))
+		if ((str1[i] >= 'A' && str1[i] <= 'Z') || (str1[i] >= 'a' && str1[i] <= 'z'))
 		{
 			str2[j] = str1[i];
 			j++;
