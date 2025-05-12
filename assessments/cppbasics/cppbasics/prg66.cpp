@@ -1,16 +1,13 @@
-//check if a number is a power of two
+//check voting eligibility
+#include<iostream>
 #include<iostream>
 using namespace std;
-bool isPowerOfTwo(int n)
-{
-	return(n > 0) && ((n & (n - 1)) == 0);
-}
 int main()
 {
-	int num;
-	cin >> num;
-	if (isPowerOfTwo(num))
-		cout << num << "is a power of two" << endl;
+	int age;
+	cin >> age;
+	if (age >= 18)
+		cout << "eligible to vote";
 	else
-		cout << num << "is not a power of two" << endl;
+		cout << "not eligible to vote";
 }

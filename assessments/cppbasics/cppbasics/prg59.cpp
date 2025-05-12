@@ -9,7 +9,7 @@ int main() {
 	while (len > 0 && str[len - 1] == ' ') {
 		len--;
 	}
-	str[len] = '\0'; // Null-terminate the string
+	str[len] = '\0'; 
 
 	cout << "String after removing trailing spaces: " << str << endl;
 
