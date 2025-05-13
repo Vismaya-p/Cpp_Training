@@ -6,7 +6,7 @@ using namespace std;
 
 bool completedQuiz() {
 	char completed;
-	cout << "Have you already completed(Y/N):";
+	cout <<"Hi ,Have you already done?(y/n)";
 	cin >> completed;
 	return(completed == 'Y' || completed == 'y');
 }
@@ -15,14 +15,13 @@ bool askQuestion(string question, string answer)
 	string userAnswer;
 	cout << question << endl;
 	cout << "Your answer:" << endl;
-	cin >> ws;
-	cin>>userAnswer;
+	cin.ignore();
+	cin >> userAnswer;
 	if (userAnswer == answer)
 	{
 		cout << "Correct" << endl;
 		return true;
-
-
+		
 	}
 	else
 	{
@@ -36,6 +35,7 @@ void showSummary(int total, int correct)
 	cout << "TOTAL QUESTION:" << total << endl;
 	cout << "CORRECT ANSWER:" << correct << endl;
 }
+
 void quiz()
 {
 
@@ -57,11 +57,7 @@ void quiz()
 	srand(time(0));
 	while (totalAsked < 5) {
 		int index;
-	}
 
-	do
-	{
-		int index;
 		do
 		{
 			index = rand() % 5;
@@ -75,18 +71,12 @@ void quiz()
 
 		}
 	}
-	/*if (totalAsked > 5) {
-		cout << "do you want another Question(Y/N)"<<endl;
-		cin >> choice;
-	}
-	else {
-		cout << "All questions are completed"<<endl;
-		break;
-	}
-} while (choice == 'Y' || choice == 'y');*/
 
-	showSummary(totalAsked, correctCount);
-}
+		
+
+		showSummary(totalAsked, correctCount);
+	}
+
 
 
 	int main()
