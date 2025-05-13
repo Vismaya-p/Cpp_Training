@@ -1,67 +1,103 @@
 #include<iostream>
-#include<stdlib.h>
-#define MAX 1024
+#define MAX 5
 #include<cstring>
+#include<cstdlib>
 using namespace std;
-int main()
+
+bool completedQuiz() {
+	char completed;
+	cout << "Have you already completed(Y/N):";
+	cin >> completed;
+	return(completed == 'Y' || completed == 'y');
+}
+bool askQuestion(string question, string answer)
 {
-	string question[MAX]
+	string userAnswer;
+	cout << question << endl;
+	cout << "Your answer:" << endl;
+	cin >> ws;
+	cin>>userAnswer;
+	if (userAnswer == answer)
 	{
-	"Q1.What is Ribosomes?","Q2.What are two types of Ribosomes?",
-	"Q3.What is vacuoles?","Q4.What are Plastids?","Q5.what are the types of plastids?"
+		cout << "Correct" << endl;
+		return true;
+
+
+	}
+	else
+	{
+		cout << "Wrong Answer "<< endl;
+		return false;
+	}
+}
+void showSummary(int total, int correct)
+{
+	cout << "QUIZ SUMMARY"<<endl;
+	cout << "TOTAL QUESTION:" << total << endl;
+	cout << "CORRECT ANSWER:" << correct << endl;
+}
+void quiz()
+{
+
+	string question[MAX] = {
+	"What is Ribosomes?","What are two types of Ribosomes?",
+	"What is vacuoles?","What are Plastids?","what are the types of plastids?"
 	};
-	string answer[MAX]
-	{
+	string answer[MAX] = {
 		"Ribosomes are known as protein factory.","Two types of Ribosomes are eukaryotes and prokaryotes.",
 		"Membrane-bound space found in cytoplasm.","It found in all plant cells.",
 		"Two types of plastids are chloropid and chromoplast."
 	};
+
 	bool asked[5] = { false };
-	int total = 5;
-	int askedQuestion = 0;
-	int askedCount = 0;
+	int totalAsked = 0;
+
 	int correctCount = 0;
-	int count = 0;
 	char choice;
-	string userAnswer;
-	cout << "===QUIZ APP==="<<endl;
+	srand(time(0));
+	while (totalAsked < 5) {
+		int index;
+	}
+
 	do
 	{
 		int index;
 		do
 		{
-			index = rand() % total;
-		} while (asked[index] == true);
+			index = rand() % 5;
+		} while (asked[index]);
 		asked[index] = true;
-		askedCount++;
-		cout <<askedQuestion <<":"<<question[index] << endl;
-		cout << "Your Answer:";
-		getline(cin>> ws,userAnswer);
-		
-		if (userAnswer == answer[index])
+		totalAsked++;
+
+		if (askQuestion(question[index], answer[index]))
 		{
-			cout << "CORRECT ANSWER"<<endl;
 			correctCount++;
-		}
-		else
-		{
-			cout << "Wrong Answer"<<endl;
-		}
-		if (askedCount < total)
-		{
-			cout << "Do you want the Next Question(Y/N):"<<endl;
-			cin >> choice;
-		}
-		else
-		{
-			cout << "Completed All Questions"<<endl;
-			break;
-		}
-	} while (choice == 'Y' || choice == 'N');
 
-	cout << "Quiz Summary";
-	cout << "Question Answered:" << askedQuestion<<endl;
-	cout << "Correct Answer:" << correctCount<<endl;
-	return 0;
+		}
+	}
+	/*if (totalAsked > 5) {
+		cout << "do you want another Question(Y/N)"<<endl;
+		cin >> choice;
+	}
+	else {
+		cout << "All questions are completed"<<endl;
+		break;
+	}
+} while (choice == 'Y' || choice == 'y');*/
 
+	showSummary(totalAsked, correctCount);
 }
+
+
+	int main()
+	{
+		if (completedQuiz())
+		{
+			cout << "Already completed" << endl;
+		}
+		else
+		{
+			quiz();
+		}
+		return 0;
+	}
