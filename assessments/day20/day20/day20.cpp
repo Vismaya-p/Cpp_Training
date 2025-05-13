@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 #define MAX 1024
 #include<cstring>
 using namespace std;
@@ -18,55 +19,49 @@ int main()
 	bool asked[5] = { false };
 	int total = 5;
 	int askedQuestion = 0;
+	int askedCount = 0;
 	int correctCount = 0;
 	int count = 0;
 	char choice;
 	string userAnswer;
-	cout << "QUIZ APP";
+	cout << "===QUIZ APP==="<<endl;
 	do
 	{
 		int index;
 		do
 		{
 			index = rand() % total;
-		}while (asked[index] == true);
+		} while (asked[index] == true);
 		asked[index] = true;
-		asked[count]++;
-		cout << "Questions" << asked[count];
-		cout << "Answer";
-		//getline(cin,userAnswer);
-		cin >> userAnswer;
+		askedCount++;
+		cout <<askedQuestion <<":"<<question[index] << endl;
+		cout << "Your Answer:";
+		getline(cin>> ws,userAnswer);
+		
 		if (userAnswer == answer[index])
 		{
-			cout << "Correct Answer";
+			cout << "CORRECT ANSWER"<<endl;
 			correctCount++;
 		}
 		else
 		{
-			cout << "Wrong answer";
+			cout << "Wrong Answer"<<endl;
 		}
-		if (asked[count] < total)
+		if (askedCount < total)
 		{
-			cout << "Do you want the Next Question";
+			cout << "Do you want the Next Question(Y/N):"<<endl;
 			cin >> choice;
 		}
 		else
 		{
-			cout << "Completed All Questions";
+			cout << "Completed All Questions"<<endl;
 			break;
 		}
-		while (choice == 'Y' || choice == 'N')
-		{
-		}
+	} while (choice == 'Y' || choice == 'N');
 
-
-
-
-
-
-
-
-
-
+	cout << "Quiz Summary";
+	cout << "Question Answered:" << askedQuestion<<endl;
+	cout << "Correct Answer:" << correctCount<<endl;
+	return 0;
 
 }
