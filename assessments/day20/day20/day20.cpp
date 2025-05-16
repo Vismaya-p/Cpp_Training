@@ -16,7 +16,7 @@ bool askQuestion(string question, string answer)
 	cout << question << endl;
 	cout << "Your answer:" << endl;
 	cin.ignore();
-	cin >> userAnswer;
+	cin>>userAnswer;
 	if (userAnswer == answer)
 	{
 		cout << "Correct" << endl;
@@ -44,9 +44,9 @@ void quiz()
 	"What is vacuoles?","What are Plastids?","what are the types of plastids?"
 	};
 	string answer[MAX] = {
-		"Ribosomes are known as protein factory.","Two types of Ribosomes are eukaryotes and prokaryotes.",
-		"Membrane-bound space found in cytoplasm.","It found in all plant cells.",
-		"Two types of plastids are chloropid and chromoplast."
+		"proteinFactory.","eukaryotes,prokaryotes.",
+		"Membrane-boundspace","Itfoundinallplantcells.",
+		"chloropid,chromoplast."
 	};
 
 	bool asked[5] = { false };
@@ -72,7 +72,6 @@ void quiz()
 		}
 	}
 
-		
 
 		showSummary(totalAsked, correctCount);
 	}
