@@ -60,6 +60,6 @@ int main()
 	m1.set_title();
 	m1.set_genre();
 	m1.set_rating();
-	m1.get_details()
+	m1.get_details();
 	m1.ratings();
 }
