@@ -20,7 +20,7 @@ public:
 	void getGrade();
 	float calcAvg();
 };
-//:: => scope resolution operator
+
 void student::setName(char* s)
 {
 	strcpy(name, s);
@@ -54,22 +54,18 @@ float student::calcAvg()
 		sum += marks[i];
 	}
 	avarage=sum / 4;
-	cout << avarage;
 	return avarage;
 }
 void student::getGrade()
 {
-	cout << avarage;
-	if (avarage>90)
+	if (avarage>=90)
 		cout << " A" << endl;
 	else if (avarage >= 75)
 		cout << " B" << endl;
 	 if ((avarage >= 45) && (avarage < 75))
 		cout << " C" << endl;
-	else if ((avarage>= 0) && (avarage< 45))
+	else if ((avarage>= 0) && (avarage<45))
 		cout << " Fail" << endl;
-	else
-		cout << "Out of range" << endl;
 }
 	
 void student::display()
@@ -91,13 +87,16 @@ int main()
 	char n[] = "Vismaya";
 	int r = 101;
 	float m[4] = { 100,80,90,100 };
-	float avgs1=s1.calcAvg();
+	
 	
 	s1.setRollno(r);
 	s1.setName(n);
 	s1.setMarks(m);
-	s1.getGrade();
+	float avgs1 = s1.calcAvg();
+	
+	
 	s1.display();
+	s1.getGrade();
 	
 	return 0;
 }
