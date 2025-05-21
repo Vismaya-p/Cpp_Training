@@ -9,23 +9,32 @@ class movie
 	char genre[20];
 	float rating;
 public:
-	void set_details();
+	void set_title();
+	void set_genre();
 	void get_details();
+	void set_rating();
 	void ratings();
 };
-void movie::set_details()
+void movie::set_title()
 {
 	cout << "Enter the movie name:"<<endl;
 	cin >> title;
-	cout << "Enter the Genre"<<endl;
+}
+void movie::set_genre()
+{
+	cout << "Enter the Genre" << endl;
 	cin >> genre;
-	cout << "Rating: "<<endl;
+}
+void movie::set_rating()
+{
+	cout << "Rating: " << endl;
 	cin >> rating;
 }
 void movie::get_details()
 {
-	cout << "TITLE: " <<title<< endl;
+	cout << "TITLE: " << title << endl;
 	cout << "GENRE: " << genre << endl;
+	cout << "RATE: " << rating << endl;
 }
 void movie::ratings()
 {
@@ -48,7 +57,9 @@ int main()
 {
 	movie m1;
 	
-	m1.set_details();
-	m1.get_details();
+	m1.set_title();
+	m1.set_genre();
+	m1.set_rating();
+	m1.get_details()
 	m1.ratings();
 }
