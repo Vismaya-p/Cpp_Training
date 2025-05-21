@@ -27,6 +27,6 @@ Quiz gk =
 	"GK Quiz",
 	{
 "What is the capital of France?","Who is the Prime minister of India?",
-"Which planet is known as the Red planet?","Who worote Ramayana?"
+"Which planet is known as the Red planet?","Who wrote Ramayana?",
 }
 };
