@@ -6,8 +6,8 @@ class atmAccount
 	string AccHolder;
 
 public:
-	void withdraw();
-	void deposit();
+	void withdraw(int);
+	void deposit(int);
 	void checkBalance();
 	void setBalance();
 };
@@ -20,20 +20,17 @@ void atmAccount::checkBalance()
 	cout << "account balance: ";
 	cout << balance;
 }
-void atmAccount::deposit()
+void atmAccount::deposit(int amount)
 {
-	int amount;
-	cout << "Enter the amount you want to deposit: " << endl;
-	cin >> amount;
+
 	balance = balance + amount;
 	cout << "amount deposited successfully" << endl;
 
 }
-void atmAccount:: withdraw()
+void atmAccount:: withdraw(int amount)
 {
-	int amount;
-	cout << "Enter the amount you want to withdraw: "<<endl;
-	cin >> amount;
+	
+	
 	balance = balance - amount;
 	if (amount <= balance)
 	{
@@ -59,10 +56,16 @@ int main()
 			a.checkBalance();
 			break;
 		case 2:
-			a.deposit();
+			int amount;
+			cout << "Enter the amount you want to deposit: " << endl;
+			cin >> amount;
+			a.deposit(amount);
 			break;
 		case 3:
-			a.withdraw();
+			int amount1;
+			cout << "Enter the amount you want to withdraw: " << endl;
+			cin >> amount1;
+			a.withdraw(amount1);
 			break;
 		case 4:
 			cout << "Exit" << endl;

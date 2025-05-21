@@ -7,7 +7,8 @@ private:
 	int rollno;
 	char name[20];
 	float marks[4];
-	float avgs;
+	float avarage;
+	
 
 public:
 	void setName(char*);
@@ -15,11 +16,8 @@ public:
 	void setRollno(int);
 	int getRollno();
 	void setMarks(float[]);
-	void getGrade();
 	void display();
-
-
-private:
+	void getGrade();
 	float calcAvg();
 };
 //:: => scope resolution operator
@@ -42,7 +40,7 @@ int student::getRollno()
 
 void student::setMarks(float m[])
 {
-	for (int i = 0;i < 4;i++)
+	for (int i = 0;i <4;i++)
 	{
 		marks[i] = m[i];
 	}
@@ -50,56 +48,51 @@ void student::setMarks(float m[])
 
 float student::calcAvg()
 {
-	float avg = 0.0;
-	for (int i = 0;i < 4;i++)
+	float sum= 0.0;
+	for (int i = 0;i <4;i++)
 	{
-		cout << marks[i] << "\t";
-		avg += marks[i];
+		sum += marks[i];
 	}
-	return avg = avg / 4;
-
-	avgs = avg;
+	avarage=sum / 4;
+	cout << avarage;
+	return avarage;
 }
 void student::getGrade()
 {
-	if (avgs >= 85 && avgs<=100)
-	{
-		cout << "A" << endl;
-	}
-	else if(avgs<85 && avgs>=70)
-	{
-		cout << "B" << endl;
-	}
-	else if (avgs < 70 && avgs >= 50)
-	{
-		cout << "C" << endl;
-	}
-	else if (avgs >= 0 && avgs <= 50)
-	{
-		cout << "fail" << endl;
-	}
+	cout << avarage;
+	if (avarage>90)
+		cout << " A" << endl;
+	else if (avarage >= 75)
+		cout << " B" << endl;
+	 if ((avarage >= 45) && (avarage < 75))
+		cout << " C" << endl;
+	else if ((avarage>= 0) && (avarage< 45))
+		cout << " Fail" << endl;
 	else
-	{
-		cout << "Invalid input";
-	}
+		cout << "Out of range" << endl;
 }
+	
 void student::display()
 {
 
 	cout << "Name: " << name << endl;
 	cout << "RollNo: " << rollno << endl;
+	for (int i = 0;i < 4;i++)
+	{
+		cout <<"mark["<< i <<"]= "<<marks[i] << "\t";
+	}
 	cout << "AVG: " << calcAvg() << endl;
 	
 }
 
 int main()
 {
-	char n[] = "Vismaya";
-	//char str2[1024] = "xyz";
-	int r = 101;
-	float m[4] = { 100,80,90,85 };
-
 	student s1;
+	char n[] = "Vismaya";
+	int r = 101;
+	float m[4] = { 100,80,90,100 };
+	float avgs1=s1.calcAvg();
+	
 	s1.setRollno(r);
 	s1.setName(n);
 	s1.setMarks(m);

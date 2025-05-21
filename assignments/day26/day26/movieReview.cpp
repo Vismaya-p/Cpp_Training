@@ -9,26 +9,43 @@ class movie
 	char genre[20];
 	float rating;
 public:
-	void set_title();
-	void set_genre();
+	void set_title(char*);
+	char* get_title();
+	void set_genre(char*);
+	char* get_genre();
 	void get_details();
-	void set_rating();
+	void set_rating(float);
+	float get_rating();
 	void ratings();
 };
-void movie::set_title()
+void movie::set_title(char* t)
 {
-	cout << "Enter the movie name:"<<endl;
-	cin >> title;
+	strcpy(title ,t);
 }
-void movie::set_genre()
+char* movie::get_title()
 {
-	cout << "Enter the Genre" << endl;
-	cin >> genre;
+	
+	return title;
 }
-void movie::set_rating()
+void movie::set_genre(char* g)
 {
-	cout << "Rating: " << endl;
-	cin >> rating;
+	
+	strcpy(genre, g);
+}
+char* movie::get_genre()
+{
+	
+	return genre;
+
+}
+void movie::set_rating(float r)
+{
+	rating = r;
+}
+float movie::get_rating()
+{
+	
+	return rating;
 }
 void movie::get_details()
 {
@@ -55,11 +72,23 @@ void movie::ratings()
 int main()
 
 {
+	char t[20] ;
+	char g[20] ;
+	float r;
 	movie m1;
+	cout << "enter title:"<<endl;
+	cin >>t;
+	m1.set_title(t);
+	cout << "enter genre:" << endl;
+	cin >> g;
+	m1.set_genre(g);
+	cout << "enter rating:"<<endl;
+	cin >> r;
+	m1.set_rating(r);
 	
-	m1.set_title();
-	m1.set_genre();
-	m1.set_rating();
-	m1.get_details();
-	m1.ratings();
+	//cout << m1.get_title() << endl;
+	//cout << m1.get_genre() << endl;
+	//cout << m1.get_rating() << endl;
+	 m1.get_details();
+	 m1.ratings();
 }
