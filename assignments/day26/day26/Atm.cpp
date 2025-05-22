@@ -6,17 +6,23 @@ class atmAccount
 	string AccHolder;
 
 public:
+	void setAccHolder(string);
 	void withdraw(int);
 	void deposit(int);
 	void checkBalance();
 	void setBalance();
 };
+void atmAccount::setAccHolder(string name)
+{
+	AccHolder = name;
+}
 void atmAccount:: setBalance()
 {
 	balance = 35000;
 }
 void atmAccount::checkBalance()
 {
+	cout << "Account Holder:" << AccHolder<<endl;
 	cout << "account balance: ";
 	cout << balance;
 }
