@@ -43,8 +43,19 @@ float Item::getPrice()
 {
 	return price;
 }
+void Item::setItemName(char* n)
+{
+	strcpy(itemName, n);
+}
+char* Item::getItemName()
+{
+	return itemName;
+}
+
 
 int main()
 {
 	Item i;
+	char n[10];
+	i.setItemName(n);
 }
