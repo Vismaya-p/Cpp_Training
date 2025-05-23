@@ -8,7 +8,7 @@ class HotelRoom
 	char Type[20];
 	bool isBooked;
 public:
-	HotelRoom(int rNo, char rType[]);
+	HotelRoom(int, char []);
 	bool bookRoom();
 	void showStatus();
 	
@@ -37,7 +37,6 @@ void HotelRoom::showStatus()
 		cout << "Room already booked." << endl;
 	}
 }	
-
 
 int main()
 {
