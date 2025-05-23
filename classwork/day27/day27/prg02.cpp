@@ -35,6 +35,14 @@ int Item::getQnty()
 {
 	return qnty;
 }
+void Item::setPrice(float p)
+{
+	p= price;
+}
+float Item::getPrice()
+{
+	return price;
+}
 
 int main()
 {
