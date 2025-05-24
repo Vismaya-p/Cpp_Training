@@ -14,7 +14,9 @@ class Array
 public:
 	Array()
 	{
-		capacity = 1;size = 0;arr = new int[capacity];
+		capacity = 1;
+		size = 0;
+		arr = new int[capacity];
 	}
 
 	int push_back(int);

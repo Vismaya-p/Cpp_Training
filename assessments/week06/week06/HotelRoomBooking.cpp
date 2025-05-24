@@ -8,12 +8,12 @@ class HotelRoom
 	char Type[20];
 	bool isBooked;
 public:
-	HotelRoom(int, char []);
+	HotelRoom(int,const char []);
 	bool bookRoom();
 	void showStatus();
 	
 };
-HotelRoom::HotelRoom(int rNo, char rType[])
+HotelRoom::HotelRoom(int rNo, const char rType[])
 {
 	RoomNumber = rNo;
 	strcpy(Type, rType);
