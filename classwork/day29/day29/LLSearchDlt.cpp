@@ -71,7 +71,7 @@ int dispMenu()
 {
 	int ch;
 	cout << "\tPress,\n\t1. Add Node Begining\n\t2. Add Node End\n";
-	cout << "\t3. Display List\n\t4. Exit..\n\tChoice: ";
+	cout << "\t3. Display List\n\t4.search\n\t5.update\n\t6.Delete\n\t7. Exit..\n\tChoice: ";
 	cin >> ch;
 	return ch;
 }
