@@ -43,7 +43,7 @@ void LinkedList::display()
 		cout << "----------------------------" << endl;
 		temp = temp->getNext();
 	}
-	cout << "NULL" << endl;
+	//cout << "NULL" << endl;
 }
 bool LinkedList::dltEmpId(int id)
 {
@@ -99,7 +99,10 @@ bool LinkedList::search(string n)
 		{
 			if (temp->getname() == n)
 			{
-				cout << n << " is found at node " << count << endl;
+				//cout << n << " is found at node " << count << endl;
+				cout << temp->getname() << endl;
+				cout << temp->getId() << endl;
+				cout << temp->getsal() << endl;
 				return true;
 			}
 			temp = temp->getNext();

@@ -4,7 +4,6 @@
 
 
 using namespace std;
-//Definations of Linked List
 
 void LinkedList::addAfter(int target, int val)
 {
