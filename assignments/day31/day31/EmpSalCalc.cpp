@@ -40,18 +40,21 @@ public:
 		return team_size*5000;
 	}
 };
-class TechLead :public Developer, public Manager
+class techLead :public Developer, public Manager
 {
 public:
-	TechLead(int empId, string name, int team_size, int coding_hours):Developer(empId, name, coding_hours),Manager(empId, name, team_size) {}
+	techLead(int empId, string name, int team_size, int coding_hours):Developer(empId, name, coding_hours),Manager(empId, name, team_size) {}
 	int calculateSalary()
 	{
 		return coding_hours * 500 + team_size * 5000;
 	}
 	void display()
 	{
-		cout << "Tech Lead Info:" << endl;
-
+		cout << "Tech Lead Info :" << endl;
+		cout << "EmpId: " << Developer::this->empId << endl;
+		cout << "Name : " << Developer::name << endl;
+		cout << "salary based on coding" << Developer::calculateSalary(this->coding_hours);
+		cout << "salary based on coding+team " << calculateSalary(this->coding_hours, this->team_size);
 	}
 
 };
@@ -67,5 +70,6 @@ int main()
 	cin >> coding_hours;
 	cout << "Team Size: ";
 	cin >> team_size;
-
+	techLead p(empId, name, team_size,coding_hours);
+	p.display();
 }
