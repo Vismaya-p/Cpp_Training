@@ -3,6 +3,7 @@
 using namespace std;
 class Employee
 {
+protected:
 	int empId;
 	string name;
 public:
@@ -21,7 +22,7 @@ public:
 	{
 		this->coding_hours=coding_hours;
 	}
-	int calculateSalary()
+	int calculateSalary(int coding_hours)
 	{
 		return coding_hours * 500;
 	}
@@ -35,7 +36,7 @@ public:
 	{
 		this->team_size = team_size;
 	}
-	int calculateTeamBenefit()
+	int calculateTeamBenefit(int team_size)
 	{
 		return team_size*5000;
 	}
@@ -44,17 +45,17 @@ class techLead :public Developer, public Manager
 {
 public:
 	techLead(int empId, string name, int team_size, int coding_hours):Developer(empId, name, coding_hours),Manager(empId, name, team_size) {}
-	int calculateSalary()
+	int calculateSalary(int coding_hours,int team_size)
 	{
 		return coding_hours * 500 + team_size * 5000;
 	}
 	void display()
 	{
 		cout << "Tech Lead Info :" << endl;
-		cout << "EmpId: " << Developer::this->empId << endl;
+		cout << "EmpId: " << Developer::empId << endl;
 		cout << "Name : " << Developer::name << endl;
-		cout << "salary based on coding" << Developer::calculateSalary(this->coding_hours);
-		cout << "salary based on coding+team " << calculateSalary(this->coding_hours, this->team_size);
+		cout << "salary based on coding" << Developer::calculateSalary(coding_hours);
+		cout << "salary based on coding+team " << calculateSalary(coding_hours,team_size);
 	}
 
 };
