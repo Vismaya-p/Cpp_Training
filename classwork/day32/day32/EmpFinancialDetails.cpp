@@ -50,16 +50,34 @@ public:
 		cout << "VP: " << e_vp << endl;
 		cout << "No of Days: " << e_days << endl;
 		int gs=(e_sal-e_pt-e_pf+e_vp)/30;
+		gs = gs * e_days;
 		cout << "Gross Sal: " << gs << endl;
 
 	}
-
+	
 };
+class LMS :public Employee//hierarchial inheritance
+{
+private:
+	int hours;
+	int days;
+public:
+	LMS(string n, char g, int a, int phno, int pt, int pf, int vp, int days, int id, int sal, string dept,int h, int d):
+		Employee(id, sal, dept, n, g, a, phno),hours(h),days(d){}
+	void dispLMS()
+	{
+		cout << "Hours: " << hours << endl;
+		cout << "Days: " << days << endl;
+	}
+	
+};
+
 int main()
 {
 
 	EmpFin e("Vismaya", 'F', 22,123456, 10, 1000, 2000, 30,101, 200000, "AMAT");
 		e.dispFin();
 
-
+		LMS lObj("Vismaya", 'F', 22,123456, 10, 1000, 2000, 30,101, 200000, "AMAT",3,4);
+		lObj.dispLMS();
 }
