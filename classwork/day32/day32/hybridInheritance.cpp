@@ -47,7 +47,7 @@ int main()
 	bcPtr->eat();
 	bcPtr->walk();
 	bcPtr->makeasound();
-	bcPtr->soundLike();
+	bcPtr->soundLike();//without using virtual in base class calls animal sound
 
 	cout << "\n===============\n\n";
 	bcPtr = &d;
