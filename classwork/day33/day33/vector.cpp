@@ -9,7 +9,7 @@ int main()
 	cout << arr.capacity() <<"  " <<arr.size() << endl;
 	arr.push_back(30);
 	cout << arr.capacity() <<"  "<< arr.size() << endl;
-
+	cout << arr.at(2) << endl;//to get the value at that index
 	for (auto i : arr)//auto- for each loop ,inside if should be an iterable object like array
 	{
 		cout << i << endl;
