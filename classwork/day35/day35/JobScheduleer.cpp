@@ -22,21 +22,16 @@ class Logger
 public:
 	Logger(const char* file)
 	{
-		try
+		fOut.open(file, ios::app);
+		if (!fOut.is_open()) 
 		{
-			fOut.open(file, ios::app);
-			if (!fOut.is_open())
-			{
-				throw"Error opening file";
-			}
-		}
-		catch (string s)
-		{
-			cout << s;
-			exit(0);
+			std::cerr << "Failed to open log file\n";
 		}
 	}
-
+	~Logger() {
+		if (fOut.is_open())
+			fOut.close();
+	}
 	const char* logleveltostring(int level)
 	{
 		switch (level)
