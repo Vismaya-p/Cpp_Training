@@ -1,0 +1,9 @@
+[INFO]Successfully loaded Jobs
+[INFO]Selected FIFO Scheduling
+[DEBUG]Executing Job ID: 1 | Priority: 2 | ExecTime 104ms
+[DEBUG]Executing Job ID: 2 | Priority: 3 | ExecTime 164ms
+[DEBUG]Executing Job ID: 3 | Priority: 1 | ExecTime 122ms
+[DEBUG]Executing Job ID: 4 | Priority: 5 | ExecTime 185ms
+[DEBUG]Executing Job ID: 5 | Priority: 4 | ExecTime 138ms
+[INFO]All jobs executed in 713ms
+[INFO]Log saved to job_log.txt
