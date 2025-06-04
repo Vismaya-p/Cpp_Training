@@ -17,15 +17,15 @@ int main()
 		{
 			break;
 		}
-		else if (command.find("critical") || (command.find("urgent")))
+		else if (command=="critical" || command=="urgent")
 		{
 			tasks.push_front(task);
 		}
-		else if (command.find("add"))
+		else if (command=="add")
 		{
 			tasks.push_back(task);
 		}
-		else if (command.find("remove"))
+		else if (command=="remove")
 		{
 			tasks.remove(task);
 		}
@@ -34,7 +34,7 @@ int main()
 			cout << "List after insertions\n";
 			for (auto i : tasks)
 			{
-				cout << i << " ";
+				cout << i <<endl;
 			}
 			cout << endl;
 		}
