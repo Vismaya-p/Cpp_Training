@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{98330603-a311-4484-8cb7-017577c7ecd3}</ProjectGuid>
-    <RootNamespace>day39</RootNamespace>
+    <ProjectGuid>{b11122de-1f5f-468e-bf69-7e030470267d}</ProjectGuid>
+    <RootNamespace>workout</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="map.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="map2.cpp" />
-    <ClCompile Include="multiMap.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="classRoundRobin.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="fileHandleLogger.cpp" />
+    <ClCompile Include="fileHandling.cpp" />
+    <ClCompile Include="jobscheduler.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="multiMap.cpp" />
+    <ClCompile Include="roundRobin.cpp" />
+    <ClCompile Include="set.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

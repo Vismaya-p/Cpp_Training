@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{25b459f0-be33-4912-bcb5-10198467720a}</ProjectGuid>
-    <RootNamespace>workouts</RootNamespace>
+    <ProjectGuid>{6bf648a8-5b80-49d1-835b-b66ce9344c85}</ProjectGuid>
+    <RootNamespace>day39</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="roundRobin.cpp" />
+    <ClInclude Include="fileTracker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fileTracker.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
