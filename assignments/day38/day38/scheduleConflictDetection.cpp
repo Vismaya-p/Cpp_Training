@@ -17,7 +17,6 @@ int main()
 			}
 			else
 			{
-
 				cout << "Already Booked" << endl;
 			}
 		
