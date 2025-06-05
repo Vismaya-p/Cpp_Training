@@ -131,6 +131,8 @@
     <ClCompile Include="browser.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="chatHistory.cpp" />
+    <ClCompile Include="commandTracker.cpp" />
     <ClCompile Include="scoreBoard.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
