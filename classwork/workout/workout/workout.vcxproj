@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="class.cpp" />
     <ClCompile Include="classRoundRobin.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="fileHandleLogger.cpp" />

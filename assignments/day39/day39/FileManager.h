@@ -12,7 +12,7 @@ struct FileMeta {
 	string ownerUser;
 };
 
-class FileTracker
+class FileManager
 {
 	map<int, FileMeta> files;
 	unordered_map<int, int> accessFrequency;
@@ -22,12 +22,12 @@ class FileTracker
 	set<pair<int, int>> quickLastAccess;
 	int timestamp;
 public:
-	FileTracker();
+	FileManager();
 	void addFile(int, string, string);
 	void accessFile(int, string, string);
 	void deleteFile(int);
+	void listAll();
 	void listRecent();
-	void displayFreq(int);
+	void displayFrequency(int);
 	void listFilesUser(string);
-
 };
