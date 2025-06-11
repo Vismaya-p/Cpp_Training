@@ -15,7 +15,7 @@ public:
 		{
 			m.lock();
 			x += 2;
-			cout << x << endl;
+			cout <<tName<<"\n"<< x << endl;
 			m.unlock();
 		}
 	}
@@ -27,12 +27,11 @@ public:
 int main()
 {
 	counter c;
-	thread t1(&counter::increment, &c,"Thread 1");
-	thread t2(&counter::increment, &c, "Thread 2");
+	thread t1(&counter::increment, &c,"Thread1");
+	thread t2(&counter::increment, &c, "Thread2");
 	t1.join();
 	t2.join();
-	c.increment("Thread 1");
-	
+
 
 	cout << c.getX() << endl;
 	return 0;
