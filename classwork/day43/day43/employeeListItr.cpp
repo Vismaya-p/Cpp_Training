@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <list>
 #include <string>
 #include <iterator>
 #include <algorithm>
@@ -39,11 +39,10 @@ public:
 int main()
 {
 
-
 	istream_iterator<Employee> inIt(std::cin);
 	istream_iterator<Employee> endIt;
 
-	vector<Employee> emp;
+	list<Employee> emp;
 
 	while (inIt != endIt)
 	{
