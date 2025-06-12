@@ -1,15 +1,31 @@
 #include<iostream>
 #include<thread>
+#include<mutex>
+
 using namespace std;
+mutex m;
 void printNum(int n, bool flag)
 {
-	for (int i = 0;i < n;i++)
+	m.lock();
+	int num = 1;
+	while (num <= n)
 	{
-		if ((i % 2 == 0) == flag)
+		if (flag)
 		{
-			cout << i << endl;
+			if (num % 2 == 0)
+			{
+				cout << num << endl;
+			}
+			num++;
+		}
+		else  
+		{
+			if(num % 2 != 0)
+				cout << num << endl;
+			num++;
 		}
 	}
+	m.unlock();
 }
 int main()
 {
@@ -17,4 +33,5 @@ int main()
 	thread t2(printNum, 30, true);
 	t1.join();
 	t2.join();
+	return 0;
 }

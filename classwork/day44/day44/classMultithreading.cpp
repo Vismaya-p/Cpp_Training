@@ -13,10 +13,11 @@ public:
 	{
 		for (int i = 0;i < 5;i++)
 		{
-			m.lock();
+			lock_guard<mutex>lock(m);//lock and unlock is done by itself
+			//m.lock();
 			x += 2;
 			cout <<tName<<"\n"<< x << endl;
-			m.unlock();
+			//m.unlock();
 		}
 	}
 	int getX()
