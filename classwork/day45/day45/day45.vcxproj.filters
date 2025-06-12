@@ -33,7 +33,7 @@
     <ClCompile Include="cpuLoadBalancer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assi.cpp">
+    <ClCompile Include="Auction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
