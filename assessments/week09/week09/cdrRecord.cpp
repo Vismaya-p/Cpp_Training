@@ -81,8 +81,8 @@ public:
             upload = stoi(values[6]);
             thirdpartymsisdn = values[7];
             thirdpartyMnc = values[8];
-            return true;
         }
+        return 1;
     }
 };
 class customer
@@ -165,6 +165,15 @@ public:
         else if (a.call_type == "MTC")
         {
             customers.outgoingVoiceout = a.duration;
+        }
+    }
+    void printData()
+    {
+        cout << "Customer Data" << endl;
+        for (const auto& e:customerDetails)
+        {
+           
+
         }
     }
 
