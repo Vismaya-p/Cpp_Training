@@ -109,8 +109,8 @@ int main() {
     liveAuctions.emplace("A1001",Auction( "Mobile", 20000));
     thread t1(auctionThread, "A1001");
 
-    Bid bid1 = { "Bob", 12000, time(0) };
-    Bid bid2 = { "Carol", 15000, time(0) };
+    Bid bid1 = { "Anu", 12000, time(0) };
+    Bid bid2 = { "Allen", 15000, time(0) };
     liveAuctions["A1001"].placeBid(bid1);
     liveAuctions["A1001"].placeBid(bid2);
 
