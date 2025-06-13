@@ -15,17 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cdr.cpp">
+    <ClCompile Include="cdrRecord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cdr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

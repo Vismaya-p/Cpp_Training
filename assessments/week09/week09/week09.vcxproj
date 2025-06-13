@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cdr.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cdr.h" />
+    <ClCompile Include="cdrRecord.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
